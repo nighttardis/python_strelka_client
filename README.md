@@ -1,4 +1,4 @@
-#Python Strelka Client
+# Python Strelka Client
 
 This is a simple Python library created to integrate [Strelka](https://target.github.io/strelka) created by Target. 
 This code is based off Target's oneshot code written in Golang.
