@@ -26,7 +26,7 @@ jobs:
                 python -m pip install build --user
             - name: Build binary and source tarball
               run: |
-                python -m build
+                python -m build --sdist --wheel --outdir ./dist/
             - name: Create Release
               id: create_release
               uses: actions/create-release@v1
@@ -55,5 +55,5 @@ jobs:
               with:
                 upload_url: ${{ steps.create_release.outputs.upload_url }}
                 asset_path: ./dist/python_strelka_client-${{ env.RELEASE_VERSION }}.py3-none-any.whl
-                asset_name: python_strelka_client-${{ env.RELEASE_VERSION }}.py3-none-any.whl
+                asset_name: python_strelka_client-${{ env.RELEASE_VERSION }}-py3-none-any.whl
                 asset_content_type: application/zip
