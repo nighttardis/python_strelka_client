@@ -3,6 +3,18 @@
 This is a simple Python library created to integrate [Strelka](https://target.github.io/strelka) created by Target. 
 This code is based off Target's oneshot code written in Golang.
 
+## How to install
+### Release
+```bash
+pip install https://github.com/nighttardis/python_strelka_client/releases/download/v0.0.1/python_strelka_client-0.0.1.tar.gz
+```
+### Current Repo
+```bash
+git clone https://github.com/nighttardis/python_strelka_client.git
+cd python_strelka_client
+python setup.py install
+```
+
 ## Example Usage
 ```python
 from python_strelka_client import python_strelka_client
