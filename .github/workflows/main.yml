@@ -47,3 +47,13 @@ jobs:
                 asset_path: ./dist/python_strelka_client-${{ env.RELEASE_VERSION }}.tar.gz
                 asset_name: python_strelka_client-${{ env.RELEASE_VERSION }}.tar.gz
                 asset_content_type: application/gzip
+            - name: Upload Release Wheel Asset
+                id: upload-release-wheel-asset
+                uses: actions/upload-release-asset@v1
+                env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                with:
+                  upload_url: ${{ steps.create_release.outputs.upload_url }}
+                  asset_path: ./dist/python_strelka_client-${{ env.RELEASE_VERSION }}.py3-none-any.whl
+                  asset_name: python_strelka_client-${{ env.RELEASE_VERSION }}.py3-none-any.whl
+                  asset_content_type: application/zip
